@@ -10,7 +10,7 @@ const Button = (props: ButtonProps) => {
   return (
     <button
       className={cn(
-        "p-2 bg-primary border border-secondary text-secondary hover:bg-accent",
+        "p-2 px-4 bg-primary border border-secondary text-secondary hover:bg-accent",
         props.className,
       )}
       onClick={props.onClick}

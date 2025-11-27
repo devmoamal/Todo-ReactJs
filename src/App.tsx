@@ -28,19 +28,7 @@ function App() {
 
   return (
     <div>
-      <div>
-        <div className="space-y-1">
-          <div className="flex space-x-2 p-2">
-            <Input value={title} onChange={(_title) => setTitle(_title)} />
-            <Button className="px-4" text="Add" onClick={handleSubmit} />
-          </div>
-          {error?.title && (
-            <div>
-              <Message message={error.title} type="error" />
-            </div>
-          )}
-        </div>
-      </div>
+      <div></div>
       <TasksList tasks={tasks} />
     </div>
   );

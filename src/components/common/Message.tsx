@@ -15,9 +15,11 @@ const Colors: Record<string, string> = {
 
 const Message = (props: MessageProps) => {
   return (
-    <p className={cn(`text-${Colors[props.type]}`, props.className)}>
-      {props.message}
-    </p>
+    <div className="px-2">
+      <p className={cn(`text-${Colors[props.type]}`, props.className)}>
+        {props.message}
+      </p>
+    </div>
   );
 };
 
