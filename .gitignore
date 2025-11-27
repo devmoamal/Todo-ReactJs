@@ -1,0 +1,7 @@
+
+#Files
+.env
+
+# Folder
+node_modules
+dist
