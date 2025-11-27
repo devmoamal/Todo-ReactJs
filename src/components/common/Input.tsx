@@ -1,12 +1,13 @@
 import { cn } from "@/utils/merge";
 
-type XInputProps = {
-  onChangeText: (value: string) => void;
+type InputProps = {
+  value?: string;
   className?: string;
   placeholder?: string;
+  onChange?: (value: string) => void;
 };
 
-const XInput = (props: XInputProps) => {
+const Input = (props: InputProps) => {
   return (
     <input
       className={cn(
@@ -15,9 +16,10 @@ const XInput = (props: XInputProps) => {
       )}
       type="text"
       placeholder={props.placeholder}
-      onChange={(e) => props.onChangeText(e.target.value)}
+      value={props.value}
+      onChange={(e) => props.onChange?.(e.target.value)}
     />
   );
 };
 
-export default XInput;
+export default Input;

@@ -5,7 +5,9 @@
     --color-secondary: #1e1e1e;
     --color-accent: #69bbff;
     --color-netural: #f7f7f7;
+    --color-success: #3dd629;
     --color-error: #eb4646;
+    --color-greay: #e5e4e2;
 }
 
 .dark {
@@ -13,12 +15,17 @@
     --color-secondary: #f7f7f7;
     --color-accent: #69bbff;
     --color-netural: #1e1e1e;
+    --color-success: #3dd629;
     --color-error: #eb4646;
+    --color-grey: #e5e4e2;
 }
 
 @theme {
     --color-primary: var(--color-primary);
     --color-secondary: var(--color-secondary);
     --color-accent: var(--color-accent);
-    --color-background: var(--color-netural);
+    --color-netural: var(--color-netural);
+    --color-error: var(--color-error);
+    --color-success: var(--color-success);
+    --color-xgrey: var(--color-xgrey);
 }

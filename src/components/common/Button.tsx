@@ -1,13 +1,12 @@
 import { cn } from "@/utils/merge";
-import * as React from "react";
 
-interface XButtonProps {
+type ButtonProps = {
   text: string;
   className?: string;
   onClick?: () => void;
-}
+};
 
-const XButton = (props: XButtonProps) => {
+const Button = (props: ButtonProps) => {
   return (
     <button
       className={cn(
@@ -21,4 +20,4 @@ const XButton = (props: XButtonProps) => {
   );
 };
 
-export default XButton;
+export default Button;
