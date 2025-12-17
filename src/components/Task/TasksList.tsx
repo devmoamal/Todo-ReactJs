@@ -7,10 +7,13 @@ type TasksList = {
 
 const TasksList = ({ tasks }: TasksList) => {
   return (
-    <div className="mt-2 mx-1 p-2 space-y-3">
-      {tasks.map((task: Task) => (
-        <TaskCard task={task} key={task.id} />
-      ))}
+    <div className="p-2 space-y-2.5">
+      {tasks
+        .slice()
+        .reverse()
+        .map((task: Task) => (
+          <TaskCard className="border-border" task={task} key={task.id} />
+        ))}
     </div>
   );
 };

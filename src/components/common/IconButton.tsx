@@ -12,10 +12,10 @@ type IconButtonProps = {
 function IconButton({ Icon, onClick, className }: IconButtonProps) {
   return (
     <Button
-      className={cn("bg-background hover:bg-hover", className)}
+      className={cn("bg-transparent hover:bg-accent", className)}
       onClick={onClick}
     >
-      <Icon />
+      <Icon className="text-text" />
     </Button>
   );
 }

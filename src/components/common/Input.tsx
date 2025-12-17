@@ -1,4 +1,4 @@
-import { cn } from "@/utils/merge";
+import { cn } from "@/lib/utils";
 import { Input as ShadcnInput } from "@/components/ui/input";
 type InputProps = {
   value?: string;

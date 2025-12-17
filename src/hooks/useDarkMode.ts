@@ -1,16 +1,10 @@
-import { useState } from "react";
-import useLocalStorage from "./useLocalStorage";
-
-type Theme = "light" | "dark";
+import useThemeStore from "@/stores/ThemeStore";
 
 function useDarkMode() {
-  // const { GetItem, SetItem } = useLocalStorage<Theme>();
+  const theme = useThemeStore((state) => state.theme);
+  const toggle = useThemeStore((state) => state.toggle);
 
-  const [theme, setTheme] = useState<Theme | undefined>(undefined);
-
-  // const [theme, setTheme] = useState<Theme>("light");
-
-  return { theme, setTheme };
+  return { theme, toggle };
 }
 
 export default useDarkMode;

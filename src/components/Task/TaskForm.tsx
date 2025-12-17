@@ -21,10 +21,10 @@ const TaskForm = ({
   className,
 }: TaskFormProps) => {
   return (
-    <div className={cn("p-2", className)}>
+    <div className={cn("p-2 py-2", className)}>
       <div className="flex gap-2">
         <Input
-          className="p-6 px-2 text-2xl!"
+          className="p-6 px-2 text-text! text-2xl!"
           placeholder="Type anything ..."
           value={title}
           onChange={setTitle}

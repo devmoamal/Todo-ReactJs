@@ -1,4 +1,4 @@
-import { cn } from "@/utils/merge";
+import { cn } from "@/lib/utils";
 import { Button as ShadcnButton } from "../ui/button";
 type ButtonProps = {
   className?: string;

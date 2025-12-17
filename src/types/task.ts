@@ -1,7 +1,7 @@
 export type Task = {
   id: string;
   title: string;
-  onDelete: (id: string) => void;
+  complete: boolean;
 };
 
 export type Tasks = Task[];

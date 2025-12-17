@@ -7,7 +7,9 @@ type ErrorMessageProps = {
 };
 
 function ErrorMessage({ message, className }: ErrorMessageProps) {
-  return <p className={cn("mt-2", className)}>{message}</p>;
+  return (
+    message && <p className={cn("text-text mt-2 ", className)}>{message}</p>
+  );
 }
 
 export default ErrorMessage;
