@@ -1,20 +1,39 @@
 import Input from "@/components/common/Input";
 import Button from "@/components/common/Button";
-import Message from "@/components/common/Message";
-type TaskFormProps = {};
+import { cn } from "@/lib/utils";
+import ErrorMessage from "../ErrorMessage";
 
-const TaskForm: React.FC<TaskFormProps> = (props: TaskFormProps) => {
+type TaskFormProps = {
+  title: string;
+  setTitle: (title: string) => void;
+  onClick: () => void;
+  error?: string;
+
+  className?: string;
+};
+
+const TaskForm = ({
+  title,
+  setTitle,
+  onClick,
+  error,
+
+  className,
+}: TaskFormProps) => {
   return (
-    <div className="space-y-1">
-      <div className="flex space-x-2 p-2">
-        <Input value={title} onChange={(_title) => setTitle(_title)} />
-        <Button className="px-4" text="Add" onClick={handleSubmit} />
+    <div className={cn("p-2", className)}>
+      <div className="flex gap-2">
+        <Input
+          className="p-6 px-2 text-2xl!"
+          placeholder="Type anything ..."
+          value={title}
+          onChange={setTitle}
+        />
+        <Button className="p-6 px-2 text-2xl!" onClick={onClick}>
+          Create Task
+        </Button>
       </div>
-      {error?.title && (
-        <div>
-          <Message message={error.title} type="error" />
-        </div>
-      )}
+      <ErrorMessage message={error} />
     </div>
   );
 };

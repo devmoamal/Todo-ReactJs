@@ -1,22 +1,22 @@
 import { cn } from "@/utils/merge";
-
+import { Button as ShadcnButton } from "../ui/button";
 type ButtonProps = {
-  text: string;
   className?: string;
   onClick?: () => void;
+  children?: React.ReactNode;
 };
 
-const Button = (props: ButtonProps) => {
+const Button = ({ children, className, onClick }: ButtonProps) => {
   return (
-    <button
+    <ShadcnButton
       className={cn(
-        "p-2 px-4 bg-primary border border-secondary text-secondary hover:bg-accent",
-        props.className,
+        "p-2 px-4 bg-primary border border-secondary text-text hover:bg-primary-foreground",
+        className
       )}
-      onClick={props.onClick}
+      onClick={onClick}
     >
-      {props.text}
-    </button>
+      {children}
+    </ShadcnButton>
   );
 };
 

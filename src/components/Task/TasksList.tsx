@@ -5,16 +5,11 @@ type TasksList = {
   tasks: Task[];
 };
 
-const TasksList = (props: TasksList) => {
+const TasksList = ({ tasks }: TasksList) => {
   return (
-    <div className="p-2 pr-32 space-y-1">
-      {props.tasks.map((task: Task) => (
-        <TaskCard
-          key={task.id}
-          id={task.id}
-          title={task.title}
-          onDelete={task.onDelete}
-        />
+    <div className="mt-2 mx-1 p-2 space-y-3">
+      {tasks.map((task: Task) => (
+        <TaskCard task={task} key={task.id} />
       ))}
     </div>
   );

@@ -5,4 +5,3 @@ export type Task = {
 };
 
 export type Tasks = Task[];
-export type TaskForm = Partial<Task>;

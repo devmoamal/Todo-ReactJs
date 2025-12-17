@@ -1,11 +1,20 @@
 import type { Task } from "@/types";
-import Button from "../common/Button";
+import { Card } from "../ui/card";
+import { cn } from "@/lib/utils";
+import IconButton from "../common/IconButton";
+import { Trash } from "lucide-react";
 
-export const TaskCard = (task: Task) => {
+type TaskCardProps = {
+  task: Task;
+
+  className?: string;
+};
+
+export const TaskCard = ({ task, className }: TaskCardProps) => {
   return (
-    <div className="flex space-x-2">
-      <p className="border w-full p-2">{task.title}</p>
-      <Button text="X" onClick={() => task.onDelete(task.id)} />
-    </div>
+    <Card className={cn("flex flex-row p-2 justify-between", className)}>
+      <p className="text-lg">{task.title}</p>
+      <IconButton Icon={Trash} onClick={() => task.onDelete(task.id)} />
+    </Card>
   );
 };

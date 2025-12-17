@@ -1,5 +1,5 @@
 import { cn } from "@/utils/merge";
-
+import { Input as ShadcnInput } from "@/components/ui/input";
 type InputProps = {
   value?: string;
   className?: string;
@@ -7,17 +7,17 @@ type InputProps = {
   onChange?: (value: string) => void;
 };
 
-const Input = (props: InputProps) => {
+const Input = ({ className, value, placeholder, onChange }: InputProps) => {
   return (
-    <input
+    <ShadcnInput
       className={cn(
-        "w-full p-1 text-secondary border border-secondary focus:border-accent focus:outline-none",
-        props.className,
+        "w-full p-1 text-text border border-border focus:border-accent focus:outline-none",
+        className
       )}
       type="text"
-      placeholder={props.placeholder}
-      value={props.value}
-      onChange={(e) => props.onChange?.(e.target.value)}
+      value={value}
+      placeholder={placeholder}
+      onChange={(e) => onChange?.(e.target.value)}
     />
   );
 };

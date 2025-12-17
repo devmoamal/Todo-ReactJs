@@ -1,7 +1,9 @@
 
 #Files
 .env
+.prettierrc
 
 # Folder
 node_modules
 dist
+.vscode
